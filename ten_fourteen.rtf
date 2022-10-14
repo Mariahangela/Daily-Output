@@ -1,0 +1,317 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 Courier;\f2\fmodern\fcharset0 Courier-Oblique;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red191\green100\blue38;\red88\green118\blue71;
+\red254\green187\blue91;\red153\green168\blue186;\red173\green169\blue32;\red86\green132\blue173;\red0\green0\blue0;
+\red133\green96\blue154;}
+{\*\expandedcolortbl;;\csgray\c0\c0;\csgenericrgb\c74902\c39216\c14902;\csgenericrgb\c34510\c46275\c27843;
+\csgenericrgb\c99608\c73333\c35686;\csgenericrgb\c60000\c65882\c72941;\csgenericrgb\c67843\c66275\c12549;\csgenericrgb\c33725\c51765\c67843;\cssrgb\c0\c0\c0;
+\csgenericrgb\c52157\c37647\c60392;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 October 14,  2022\
+
+\fs48 \
+Main.dart\
+
+\fs24 \cb2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf3 import \cf4 'package:flutter/material.dart'\cf3 ;\
+import \cf4 'package:star/splash.dart'\cf3 ;\
+\
+void \cf5 main\cf6 () => runApp(\cf5 MyApp\cf6 ())\cf3 ;\
+\
+class \cf6 MyApp \cf3 extends \cf6 StatelessWidget \{\
+  \cf3 const \cf6 MyApp(\{\cf3 super\cf6 .key\})\cf3 ;\
+\
+  \cf7 @override\
+  \cf6 Widget \cf5 build\cf6 (BuildContext context) \{\
+    \cf3 return \cf5 MaterialApp\cf6 (\
+      debugShowCheckedModeBanner: \cf3 false,\
+      \cf6 title: \cf4 "Pinoy Quiz App"\cf3 ,\
+      \cf6 theme: \cf5 ThemeData\cf6 (\
+        primaryColor: \cf5 Color\cf6 (\cf8 0xFF252c4a\cf6 )\cf3 ,\
+      \cf6 )\cf3 ,\
+      \cf6 home: \cf5 splashscreen\cf6 ()\cf3 ,\
+    \cf6 )\cf3 ;\
+  \cf6 \}\
+\}\
+\
+
+\fs48 \cf9 Splash.dart
+\fs26 \cf6 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs28 \cf3 import \cf4 'dart:async'\cf3 ;\
+\
+import \cf4 'package:flutter/material.dart'\cf3 ;\
+import \cf4 'package:star/home.dart'\cf3 ;\
+\
+class \cf6 splashscreen \cf3 extends \cf6 StatefulWidget \{\
+   \cf3 const \cf6 splashscreen(\{Key? key\}) : \cf3 super\cf6 (key: key)\cf3 ;\
+ \
+   \cf7 @override\
+   \cf6 State<splashscreen> \cf5 createState\cf6 () => \cf5 _splashscreenState\cf6 ()\cf3 ;\
+ \cf6 \}\
+ \
+ \cf3 class \cf6 _splashscreenState \cf3 extends \cf6 State<splashscreen> \{\
+\
+  \cf7 @override\
+  \cf3 void \cf5 initState\cf6 () \{\
+    \cf3 super\cf6 .initState()\cf3 ;\
+    \cf5 Timer\cf6 (\cf5 Duration\cf6 (seconds: \cf8 3\cf6 )\cf3 , \cf6 ()\
+    \{\
+      Navigator.
+\f2\i \cf5 of
+\f1\i0 \cf6 (\cf10 context\cf6 ).pushReplacement(\cf5 MaterialPageRoute\cf6 (\
+        builder: (context) => \cf5 homepage\cf6 ()\cf3 ,\
+      \cf6 ))\cf3 ;\
+    \cf6 \})\cf3 ;\
+  \cf6 \}\
+\
+   \cf7 @override\
+   \cf6 Widget \cf5 build\cf6 (BuildContext context) \{\
+     \cf3 return \cf5 Scaffold\cf6 (\
+       backgroundColor: \cf5 Color\cf6 (\cf8 0xFF252c4a\cf6 )\cf3 ,\
+       \cf6 body: \cf5 Center\cf6 (\
+         child: \cf5 Text\cf6 (\
+           \cf4 "Pinoy Quiz App"\cf3 ,\
+           \cf6 style: \cf5 TextStyle\cf6 (\
+             fontSize: \cf8 50.0\cf3 ,\
+             \cf6 color: Colors.
+\f2\i \cf10 white
+\f1\i0 \cf3 ,\
+           \cf6 )\cf3 ,\
+         \cf6 )\cf3 ,\
+       \cf6 )\cf3 ,\
+     \cf6 )\cf3 ;\
+   \cf6 \}\
+ \}\
+ \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs48 \cf9 Home.dart\
+
+\fs26 \cf6 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs28 \cf3 import \cf4 'package:flutter/material.dart'\cf3 ;\
+import \cf4 'package:star/quizpage.dart'\cf3 ;\
+export \cf4 'package:flutter/material.dart'\cf3 ;\
+\
+class \cf6 homepage \cf3 extends \cf6 StatefulWidget \{\
+  \cf7 @override\
+  \cf6 State<homepage> \cf5 createState\cf6 () => \cf5 _homepageState\cf6 ()\cf3 ;\
+\cf6 \}\
+\
+\cf3 class \cf6 _homepageState \cf3 extends \cf6 State<homepage> \{\
+\
+  List <String> \cf10 images \cf6 = [\
+    \cf4 "assets/history.png"\cf3 ,\
+    \cf4 "assets/people.png"\cf3 ,\
+    \cf4 "assets/pinas.png"\cf3 ,\
+    \cf4 "assets/fun.png"\cf3 ,\
+  \cf6 ]\cf3 ;\
+\
+  \cf6 Widget \cf5 customcard\cf6 (String langname\cf3 , \cf6 String image)\{\
+    \cf3 return \cf5 Padding\cf6 (\
+        padding: \cf5 EdgeInsets\cf6 .\cf5 all\cf6 (\
+            \cf8 15.0\cf3 ,\
+        \cf6 )\cf3 ,\
+      \cf6 child: \cf5 InkWell\cf6 (\
+        onTap: () \{\
+          Navigator.
+\f2\i \cf5 of
+\f1\i0 \cf6 (\cf10 context\cf6 ).pushReplacement(\cf5 MaterialPageRoute\cf6 (builder: (context) => \cf5 getjson\cf6 ()\cf3 ,\
+          \cf6 ))\cf3 ;\
+        \cf6 \}\cf3 ,\
+        \cf6 child: \cf5 Material\cf6 (\
+          color: \cf5 Color\cf6 (\cf8 0xFF252c4a\cf6 )\cf3 ,\
+          \cf6 elevation: \cf8 10.0\cf3 ,\
+          \cf6 borderRadius: \cf5 BorderRadius\cf6 .\cf5 circular\cf6 (\cf8 20.0\cf6 )\cf3 ,\
+          \cf6 child:  \cf5 Container\cf6 (\
+            child: \cf5 Column\cf6 (\
+              children: <Widget> [\
+                \cf5 Padding\cf6 (\
+                    padding: \cf5 EdgeInsets\cf6 .\cf5 symmetric\cf6 (\
+                        vertical: \cf8 8.0\cf3 ,\
+                    \cf6 )\cf3 ,\
+                  \cf6 child: \cf5 Material\cf6 (\
+                    elevation: \cf8 5.0\cf3 ,\
+                      \cf6 borderRadius: \cf5 BorderRadius\cf6 .\cf5 circular\cf6 (\cf8 100.0 \cf6 )\cf3 ,\
+                     \cf6 child: \cf5 Container\cf6 (\
+                       height: \cf8 200.0\cf3 ,\
+                       \cf6 width: \cf8 200.0\cf3 ,\
+                       \cf6 child: \cf5 ClipOval\cf6 (\
+                         child: \cf5 Image\cf6 (\
+                           fit: BoxFit.\cf10 fitHeight\cf3 ,\
+                           \cf6 image: \cf5 AssetImage\cf6 (\
+                              image\cf3 ,\
+                           \cf6 )\cf3 ,\
+                         \cf6 )\cf3 ,\
+                       \cf6 )\cf3 ,\
+                     \cf6 )\cf3 ,\
+                  \cf6 )\cf3 ,\
+                \cf6 )\cf3 ,\
+                \cf5 Center\cf6 (\
+                  child: \cf5 Text\cf6 (\
+                    langname\cf3 ,\
+                    \cf6 style: \cf5 TextStyle\cf6 (\
+                      fontSize: \cf8 24.0\cf3 ,\
+                      \cf6 color: Colors.
+\f2\i \cf10 white
+\f1\i0 \cf3 ,\
+                      \cf6 fontWeight: FontWeight.
+\f2\i \cf10 bold
+\f1\i0 \cf3 ,\
+                    \cf6 )\cf3 ,\
+                  \cf6 )\cf3 ,\
+                \cf6 )\cf3 ,\
+\
+\
+                \cf5 Container\cf6 (\
+                  padding: \cf5 EdgeInsets\cf6 .\cf5 all\cf6 (\cf8 20.0\cf6 )\cf3 ,\
+                  \cf6 child: \cf5 Text\cf6 (\
+                    \cf4 "This app will test your knowledge about the country you think you know very well."\cf3 ,\
+                 \cf6 style:  \cf5 TextStyle\cf6 (\
+                   fontSize: \cf8 18.0\cf3 ,\
+                   \cf6 color: Colors.
+\f2\i \cf10 white
+\f1\i0 \cf3 ,\
+                 \cf6 )\cf3 ,\
+                    \cf6 maxLines: \cf8 5\cf3 ,\
+                    \cf6 textAlign: TextAlign.\cf10 justify \cf3 ,\
+                  \cf6 )\cf3 ,\
+                \cf6 )\cf3 ,\
+              \cf6 ]\cf3 ,\
+            \cf6 )\cf3 ,\
+          \cf6 )\cf3 ,\
+        \cf6 )\cf3 ,\
+      \cf6 )\cf3 ,\
+    \cf6 )\cf3 ;\
+  \cf6 \}\
+\
+  \cf7 @override\
+  \cf6 Widget \cf5 build\cf6 (BuildContext context) \{\
+    \cf3 return \cf5 Scaffold\cf6 (\
+      backgroundColor: Colors.
+\f2\i \cf10 white
+\f1\i0 \cf3 ,\
+      \cf6 appBar: \cf5 AppBar\cf6 (\
+        backgroundColor: \cf5 Color\cf6 (\cf8 0xFF252c4a\cf6 )\cf3 ,\
+        \cf6 title: \cf5 Text\cf6 (\
+          \cf4 "Pinoy Quiz App"\cf3 ,\
+          \cf6 style: \cf5 TextStyle\cf6 (\
+            fontSize: \cf8 25.0\cf3 ,\
+            \cf6 color: Colors.
+\f2\i \cf10 white
+\f1\i0 \cf3 ,\
+          \cf6 )\cf3 ,\
+        \cf6 )\cf3 ,\
+      \cf6 ) \cf3 ,\
+      \cf6 body: \cf5 ListView\cf6 (\
+         children: <Widget>[\
+           customcard(\cf4 "uno"\cf3 , \cf10 images \cf6 [\cf8 0\cf6 ])\cf3 ,\
+           \cf6 customcard(\cf4 "dos"\cf3 , \cf10 images \cf6 [\cf8 1\cf6 ])\cf3 ,\
+           \cf6 customcard(\cf4 "tres"\cf3 , \cf10 images \cf6 [\cf8 2\cf6 ])\cf3 ,\
+           \cf6 customcard(\cf4 "cuatro"\cf3 , \cf10 images \cf6 [\cf8 3\cf6 ])\cf3 ,\
+         \cf6 ]\cf3 ,\
+      \cf6 )\cf3 ,\
+    \cf6 )\cf3 ;\
+  \cf6 \}\
+\}\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs26 \cf6 \
+
+\fs48 \cf9 Quizpage.dart
+\fs26 \cf6 \
+\
+\cf3 import \cf4 'dart:convert'\cf3 ;\
+\
+import \cf4 'package:flutter/material.dart'\cf3 ;\
+\
+class \cf6 getjson \cf3 extends \cf6 StatelessWidget \{\
+  \cf3 const \cf6 getjson(\{Key? key\}) : \cf3 super\cf6 (key: key)\cf3 ;\
+\
+  \cf7 @override\
+  \cf6 Widget \cf5 build\cf6 (BuildContext context) \{\
+    \cf3 return \cf5 FutureBuilder\cf6 (\
+      future: DefaultAssetBundle.
+\f2\i \cf5 of
+\f1\i0 \cf6 (context).loadString(\cf4 "assets/nine.png"\cf6 )\cf3 ,\
+      \cf6 builder: (context\cf3 , \cf6 snapshot)\{\
+        \cf3 var \cf6 mydata = json.decode(snapshot.\cf10 data\cf6 .toString())\cf3 ;\
+        if\cf6 (mydata == \cf3 null\cf6 ) \{\
+          \cf3 return const \cf5 Scaffold\cf6 (\
+            body: \cf5 Center\cf6 (\
+              child: \cf5 Text\cf6 (\
+                \cf4 "Loading..."\cf3 ,\
+              \cf6 )\cf3 ,\
+            \cf6 )\cf3 ,\
+          \cf6 )\cf3 ;\
+        \cf6 \}\cf3 else\cf6 \{\
+          \cf3 return \cf5 quizpage\cf6 ( )\cf3 ;\
+        \cf6 \}\
+      \}\cf3 ,\
+    \cf6 )\cf3 ;\
+  \cf6 \}\
+\}\
+\
+\cf3 class \cf6 quizpage \cf3 extends \cf6 StatefulWidget \{\
+  \cf3 const \cf6 quizpage(\{Key? key\}) : \cf3 super\cf6 (key: key)\cf3 ;\
+\
+  \cf7 @override\
+  \cf6 State<quizpage> \cf5 createState\cf6 () => \cf5 _quizpageState\cf6 ()\cf3 ;\
+\cf6 \}\
+\
+\cf3 class \cf6 _quizpageState \cf3 extends \cf6 State<quizpage> \{\
+  \cf7 @override\
+  \cf6 Widget \cf5 build\cf6 (BuildContext context) \{\
+    \cf3 return \cf5 Scaffold\cf6 (\
+      body: \cf5 Column\cf6 (\
+        children: <Widget> [\
+          \cf5 Expanded\cf6 (\
+            flex: \cf8 3\cf3 ,\
+            \cf6 child: \cf5 Container\cf6 (\
+              child: \cf5 Text\cf6 (\
+                  \cf4 "Sample Question aqbwudsgwefnbjhegrvhibncwedicfiendbhsfdixquwdjwbej"\cf3 ,\
+              \cf6 )\cf3 ,\
+            \cf6 )\cf3 ,\
+          \cf6 )\cf3 ,\
+          \cf5 Expanded\cf6 (\
+            flex: \cf8 6\cf3 ,\
+            \cf6 child: \cf5 Container\cf6 (\
+                decoration: \cf5 BoxDecoration\cf6 (\
+                  color: Colors.
+\f2\i \cf10 greenAccent
+\f1\i0 \cf3 ,\
+                \cf6 )\cf3 ,\
+            \cf6 )\cf3 ,\
+          \cf6 )\cf3 ,\
+          \cf5 Expanded\cf6 (\
+            flex: \cf8 1\cf3 ,\
+            \cf6 child: \cf5 Container\cf6 (\
+                decoration: \cf5 BoxDecoration\cf6 (\
+                  color: Colors.
+\f2\i \cf10 blueAccent
+\f1\i0 \cf3 ,\
+                \cf6 )\cf3 ,\
+            \cf6 )\cf3 ,\
+          \cf6 )\cf3 ,\
+        \cf6 ]\cf3 ,\
+      \cf6 )\cf3 ,\
+    \cf6 )\cf3 ;\
+  \cf6 \}\
+\}\
+\
+\
+\
+\
+\
+\
+}
