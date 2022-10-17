@@ -1,0 +1,1637 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red153\green168\blue186;\red0\green0\blue0;\red133\green96\blue154;
+\red191\green100\blue38;\red88\green118\blue71;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\csgenericrgb\c60000\c65882\c72941;\csgray\c0\c0;\csgenericrgb\c52157\c37647\c60392;
+\csgenericrgb\c74902\c39216\c14902;\csgenericrgb\c34510\c46275\c27843;\cssrgb\c0\c0\c0;}
+\margl1440\margr1440\vieww28600\viewh15020\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf0 October 17, 2022\
+\
+	 
+\fs26 Last Friday I decided to re-create my app. So today I re-coded my 100 questions and answer and input the files into a .json. This whole day I only do that,  I never it expected it to be very tiring. \
+\
+
+\fs48 File 1 \
+
+\fs26 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1 \cf2 \cb3 [\
+\
+    \{\
+\
+        \cf4 "1"\cf5 : \cf6 "How many years did the Spaniard colonized the Philippines?"\cf5 ,\
+\
+        \cf4 "2"\cf5 : \cf6 "What happened On June 12, 1898?"\cf5 ,\
+\
+        \cf4 "3"\cf5 : \cf6 "San Agustin church, the oldest stone church in the Philippines, survived 7 earthquakes and 2 fires. What year was it build?"\cf5 ,\
+\
+        \cf4 "4"\cf5 : \cf6 "This is the basis of the Second Republic under the Japanese era."\cf5 ,\
+\
+        \cf4 "5"\cf5 : \cf6 "When did the Japanese bombing of Pearl Harbor occur?"\cf5 ,\
+\
+        \cf4 "6"\cf5 : \cf6 "What is the original name of Luneta Park?"\cf5 ,\
+\
+        \cf4 "7"\cf5 : \cf6 "Which country occupied the Philippines during World War II?"\cf5 ,\
+\
+        \cf4 "8"\cf5 : \cf6 "The date when the Philippine-American war broke out."\cf5 ,\
+\
+        \cf4 "9"\cf5 : \cf6 "What islands were originally called 'Las Islas Filipinas' (Philippine Islands) before being adopted as the name of the entire archipelago?"\cf5 ,\
+\
+        \cf4 "10"\cf5 : \cf6 "Which dialect was chosen as the basis of the national language?"\cf5 ,\
+\
+        \cf4 "11"\cf5 : \cf6 "The Philippines has been under the control of different countries over the years. What type of government is currently in place in the Philippines?"\cf5 ,\
+\
+        \cf4 "12"\cf5 : \cf6 "In pre-colonial Philippines, he was believed to be the highest deity and lord of all creations. What is his name?"\cf5 ,\
+\
+        \cf4 "13"\cf5 : \cf6 "Which country had the Philippines as its colony from 1898 to 1946, except for some years during World War 2?"\cf5 ,\
+\
+        \cf4 "14"\cf5 : \cf6 "Jose Rizal was executed in Bagumbayan, now known as _________."\cf5 ,\
+\
+        \cf4 "15"\cf5 : \cf6 "Our Philippine Independence was proclaimed in _____________."\cf5 ,\
+\
+        \cf4 "16"\cf5 : \cf6 "Birth date of Dr. Jose P. Rizal."\cf5 ,\
+\
+        \cf4 "17"\cf5 : \cf6 "The number of martyrs of Cavite, who were executed by a firing squad on September 12, 1896."\cf5 ,\
+\
+        \cf4 "18"\cf5 : \cf6 "The original Philippines flag was sewn in?"\cf5 ,\
+\
+        \cf4 "19"\cf5 : \cf6 "_______________ is a mode of transportation that is unique to the Philippines."\cf5 ,\
+\
+        \cf4 "20"\cf5 : \cf6 "Is consider the oldest university in the Philippines and in Asia."\cf5 ,\
+\
+        \cf4 "21"\cf5 : \cf6 "During World War II in the Philippines, the occupying Japanese government-issued fiat currency in several denominations; this is known as the Japanese government-issued Philippine fiat peso."\
+\
+\
+    \cf2 \}\cf5 ,\
+\
+    \cf2 \{\
+\
+\
+        \cf4 "1"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "323"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "333"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "322"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "332"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "2"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Labor Day"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Independence Day"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Day of Valori"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Rizal Day"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "3"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "1689"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "1564"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "1589"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "1571"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "4"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "National Assembly"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Constitution of 1943"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Philippine Commission"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Constitution 1935"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "5"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "September 2, 1945"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "February 14, 1949"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "December 7, 1941"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "August 14, 1942"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "6"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Rizal Park"\cf5 ,\
+\
+            \cf4 "b."\cf5 : \cf6 "Pook Pasyalan"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Luneta Park"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Bagumbayan"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "7"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Spain"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "USA"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "China"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Japan"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "8"\cf5 : \cf2 \{\
+            \cf4 "a"\cf5 : \cf6 "July 4, 1899"\cf5 ,\
+            \cf4 "b"\cf5 : \cf6 "November 4, 1899"\cf5 ,\
+            \cf4 "c"\cf5 : \cf6 "February 4, 1899"\cf5 ,\
+            \cf4 "d"\cf5 : \cf6 "August 4, 1899"\
+        \cf2 \}\cf5 ,\
+\
+            \cf4 "9"\cf5 : \cf2 \{\
+\
+    \cf4 "a"\cf5 : \cf6 "Cebu and Bohol"\cf5 ,\
+\
+    \cf4 "b"\cf5 : \cf6 "Leyte and Samar"\cf5 ,\
+\
+    \cf4 "c"\cf5 : \cf6 "Luzon and Visayas"\cf5 ,\
+\
+    \cf4 "d"\cf5 : \cf6 "Samar and Mindanao"\
+\
+\cf2 \}\cf5 ,\
+\
+    \cf4 "10"\cf5 : \cf2 \{\
+\
+    \cf4 "a"\cf5 : \cf6 "Spanish"\cf5 ,\
+\
+    \cf4 "b"\cf5 : \cf6 "Ilokano"\cf5 ,\
+\
+    \cf4 "c"\cf5 : \cf6 "English"\cf5 ,\
+\
+    \cf4 "d"\cf5 : \cf6 "Tagalog"\
+\
+\cf2 \}\cf5 ,\
+\
+    \cf4 "11"\cf5 : \cf2 \{\
+\
+    \cf4 "a"\cf5 : \cf6 "Democracy"\cf5 ,\
+\
+    \cf4 "b"\cf5 : \cf6 "Monarchy"\cf5 ,\
+\
+    \cf4 "c"\cf5 : \cf6 "Dictatorship"\cf5 ,\
+\
+    \cf4 "d"\cf5 : \cf6 "Dictatorship"\
+\
+\
+\
+    \cf2 \}\cf5 ,\
+\
+    \cf4 "12"\cf5 : \cf2 \{\
+\
+    \cf4 "a"\cf5 : \cf6 "Sidapa"\cf5 ,\
+\
+    \cf4 "b"\cf5 : \cf6 "Lalalon"\cf5 ,\
+\
+    \cf4 "c"\cf5 : \cf6 "Bathala"\cf5 ,\
+\
+    \cf4 "d"\cf5 : \cf6 "Agni"\
+\
+    \cf2 \}\cf5 ,\
+    \cf4 "13"\cf5 : \cf2 \{\
+\
+    \cf4 "a"\cf5 : \cf6 "Spain"\cf5 ,\
+\
+    \cf4 "b"\cf5 : \cf6 "USA"\cf5 ,\
+\
+    \cf4 "c"\cf5 : \cf6 "UK"\cf5 ,\
+\
+    \cf4 "d"\cf5 : \cf6 "Japan"\
+\
+\cf2 \}\cf5 ,\
+\
+    \cf4 "14"\cf5 : \cf2 \{\
+\
+    \cf4 "a"\cf5 : \cf6 "Manila"\cf5 ,\
+\
+    \cf4 "b"\cf5 : \cf6 "Rizal Park"\cf5 ,\
+\
+    \cf4 "c"\cf5 : \cf6 "Kawit, Cavite"\cf5 ,\
+\
+    \cf4 "d"\cf5 : \cf6 "Fort Santiago"\
+\
+\cf2 \}\cf5 ,\
+    \cf4 "15"\cf5 : \cf2 \{\
+\
+    \cf4 "a"\cf5 : \cf6 "Manila"\cf5 ,\
+\
+    \cf4 "b"\cf5 : \cf6 "Rizal Park"\cf5 ,\
+\
+    \cf4 "c"\cf5 : \cf6 "Kawit, Cavite"\cf5 ,\
+\
+    \cf4 "d"\cf5 : \cf6 "Calamba, Laguna"\
+\
+\cf2 \}\cf5 ,\
+\
+    \cf4 "16"\cf5 : \cf2 \{\
+\
+    \cf4 "a"\cf5 : \cf6 "June 18, 1861"\cf5 ,\
+\
+    \cf4 "b"\cf5 : \cf6 "June 17, 1861"\cf5 ,\
+\
+    \cf4 "c"\cf5 : \cf6 "June 19, 1861"\cf5 ,\
+\
+    \cf4 "d"\cf5 : \cf6 "June 16, 1861"\
+\
+\cf2 \}\cf5 ,\
+    \cf4 "17"\cf5 : \cf2 \{\
+\
+    \cf4 "a"\cf5 : \cf6 "11"\cf5 ,\
+\
+    \cf4 "b"\cf5 : \cf6 "12"\cf5 ,\
+\
+    \cf4 "c"\cf5 : \cf6 "13"\cf5 ,\
+\
+    \cf4 "d"\cf5 : \cf6 "14"\
+\
+\cf2 \}\cf5 ,\
+\
+    \cf4 "18"\cf5 : \cf2 \{\
+\
+    \cf4 "a"\cf5 : \cf6 "Malaysia"\cf5 ,\
+\
+    \cf4 "b"\cf5 : \cf6 "China"\cf5 ,\
+\
+    \cf4 "c"\cf5 : \cf6 "Hong Kong"\cf5 ,\
+\
+    \cf4 "d"\cf5 : \cf6 "Singapore"\
+\
+\cf2 \}\cf5 ,\
+    \cf4 "19"\cf5 : \cf2 \{\
+\
+    \cf4 "a"\cf5 : \cf6 "Tricycle"\cf5 ,\
+\
+    \cf4 "b"\cf5 : \cf6 "Trolly"\cf5 ,\
+\
+    \cf4 "c"\cf5 : \cf6 "Bus"\cf5 ,\
+\
+    \cf4 "d"\cf5 : \cf6 "Jeepney"\
+\
+    \cf2 \}\cf5 ,\
+\
+    \cf4 "20"\cf5 : \cf2 \{\
+\
+    \cf4 "a"\cf5 : \cf6 "University of the Philippines"\cf5 ,\
+\
+    \cf4 "b"\cf5 : \cf6 "University of San Carlos"\cf5 ,\
+\
+    \cf4 "c"\cf5 : \cf6 "University of Santo Tomas"\cf5 ,\
+\
+    \cf4 "d"\cf5 : \cf6 "Ateneo de Manila"\
+\
+    \cf2 \}\cf5 ,\
+\
+    \cf4 "21"\cf5 : \cf2 \{\
+\
+    \cf4 "a"\cf5 : \cf6 "Philippine peso"\cf5 ,\
+\
+    \cf4 "b"\cf5 : \cf6 "Mickey Mouse Money"\cf5 ,\
+\
+    \cf4 "c"\cf5 : \cf6 "Philippine real"\cf5 ,\
+\
+    \cf4 "d"\cf5 : \cf6 "Japanese Yen"\
+\
+\cf2 \}\
+\
+    \}\cf5 ,\
+\
+    \cf2 \{\
+\
+        \cf4 "1"\cf5 : \cf6 "333"\cf5 ,\
+\
+        \cf4 "2"\cf5 : \cf6 "Independence Day"\cf5 ,\
+\
+        \cf4 "3"\cf5 : \cf6 "1571"\cf5 ,\
+\
+        \cf4 "4"\cf5 : \cf6 "Constitution of 1943"\cf5 ,\
+\
+        \cf4 "5"\cf5 : \cf6 "December 7, 1941"\cf5 ,\
+\
+        \cf4 "6"\cf5 : \cf6 "Bagumbayan"\cf5 ,\
+\
+        \cf4 "7"\cf5 : \cf6 "Japan"\cf5 ,\
+\
+        \cf4 "8"\cf5 : \cf6 "February 4, 1899"\cf5 ,\
+\
+        \cf4 "9"\cf5 : \cf6 "Leyte and Samar"\cf5 ,\
+\
+        \cf4 "10"\cf5 : \cf6 "Tagalog"\cf5 ,\
+\
+        \cf4 "11"\cf5 : \cf6 "Democracy"\cf5 ,\
+\
+        \cf4 "12"\cf5 : \cf6 "Bathala"\cf5 ,\
+\
+        \cf4 "13"\cf5 : \cf6 "USA"\cf5 ,\
+\
+        \cf4 "14"\cf5 : \cf6 "Rizal Park"\cf5 ,\
+\
+        \cf4 "15"\cf5 : \cf6 "Kawit, Cavite"\cf5 ,\
+\
+        \cf4 "16"\cf5 : \cf6 "June 19 1861"\cf5 ,\
+\
+        \cf4 "17"\cf5 : \cf6 "13"\cf5 ,\
+\
+        \cf4 "18"\cf5 : \cf6 "Hong Kong"\cf5 ,\
+\
+        \cf4 "19"\cf5 :  \cf6 "Jeepney"\cf5 ,\
+\
+        \cf4 "20"\cf5 : \cf6 "University of Santo Tomas"\cf5 ,\
+\
+        \cf4 "21"\cf5 : \cf6 "Mickey Mouse Money"\
+\
+    \cf2 \}\
+\
+]\
+\
+\
+\
+\
+\
+
+\fs48 \cf7 File 2\
+
+\fs26 \cf2 \
+[\
+    \{\
+\
+        \cf4 "1"\cf5 : \cf6 "To whom did the name Philippines come from?"\cf5 ,\
+\
+        \cf4 "2"\cf5 : \cf6 "Who is the sixth president of the Philippines?"\cf5 ,\
+\
+        \cf4 "3"\cf5 : \cf6 "What is the full name of Dr. Jose Rizal?"\cf5 ,\
+\
+        \cf4 "4"\cf5 : \cf6 "Who are the GOMBUURZA martyrs?"\cf5 ,\
+\
+        \cf4 "5"\cf5 : \cf6 " ___________ ruled over the most part of Mindanao from 1625 to 1671 and he fought attempts of the Spaniards to conquer his kingdom. On January 13, 1975 he was declared  as a national hero by former President Ferdinand Marcos."\cf5 ,\
+\
+        \cf4 "6"\cf5 : \cf6 "Who is the founder of Islam in Mindanao?"\cf5 ,\
+\
+        \cf4 "7"\cf5 : \cf6 "She is the first woman to hold two of the highest offices in the country: Vice President and Speaker of the House."\cf5 ,\
+\
+        \cf4 "8"\cf5 : \cf6 "Who said these words? 'To not love one's own language is more than animals and fishy fish'"\cf5 ,\
+\
+        \cf4 "9"\cf5 : \cf6 "Which Filipino boxer is known for his nickname 'Pac-Man\'92?"\cf5 ,\
+\
+        \cf4 "10"\cf5 : \cf6 "Who said these immortal words, 'A Filipino is worth dying for'?"\cf5 ,\
+\
+        \cf4 "11"\cf5 : \cf6 "She was known as the 'Grand Woman of the Revolution' and the 'Mother of Balintawak' for her contributions."\cf5 ,\
+\
+        \cf4 "12"\cf5 : \cf6 "Who of the following explorers arrived in the Philippines in 1521?"\cf5 ,\
+\
+        \cf4 "13"\cf5 : \cf6 "Brains of the Katipunan. He wrote the Kartilya ng Katipunan, the primer of the Katipunan which embodied the teachings of the organization."\cf5 ,\
+\
+        \cf4 "14"\cf5 : \cf6 "The third and last President of the Commonwealth of the Philippines?"\cf5 ,\
+\
+        \cf4 "15"\cf5 : \cf6 "Leader of the independence movement, and the first president of the Philippine Commonwealth."\cf5 ,\
+\
+        \cf4 "16"\cf5 : \cf6 "During his term, he made Malaca\'f1ang literally a 'house of the people', opening its gates to the public."\cf5 ,\
+\
+        \cf4 "17"\cf5 : \cf6 "He composed the melody of the Lupang Hinirang."\cf5 ,\
+\
+        \cf4 "18"\cf5 : \cf6 "He became the first president in Asia to be impeached from an executive role and resigned from power."\cf5 ,\
+\
+        \cf4 "19"\cf5 : \cf6 "He wrote Filipinas, a patriotic poem in Spanish, which became the lyrics of the Philippine National Anthem."\cf5 ,\
+\
+        \cf4 "20"\cf5 : \cf6 "Who is the Hero of Tirad Pass?"\cf5 ,\
+\
+        \cf4 "21"\cf5 : \cf6 "For his 150 essays and 66 editorials mostly published in La Solidaridad and various anti-friar pamphlets, he is widely regarded as the 'Father of Philippine Journalism'."\cf5 ,\
+\
+        \cf4 "22"\cf5 : \cf6 "Name the Filipino artist who painted the famous Spolarium."\cf5 ,\
+\
+        \cf4 "23"\cf5 : \cf6 "Who is the founder of the Philippine revolutionary organization named Katipunan or KKK?"\cf5 ,\
+\
+        \cf4 "24"\cf5 : \cf6 "Who is the founder of the Philippine's first military academy?"\cf5 ,\
+\
+        \cf4 "25"\cf5 : \cf6 "Political analyst of the Filipino colony in Spain. He founded the nationalistic newspaper, Diariong Tagalog"\cf5 ,\
+\
+        \cf4 "26"\cf5 : \cf6 "____________ was determine to return to his troops, continue the fight, and lead as many of his men as possible to safety.  He issued his promise of \'93I shall return\'94 to his men and the Philippines people."\cf5 ,\
+\
+        \cf4 "27"\cf5 : \cf6 "Who ruled the Philippines for 21 years (1965-1986) and was ousted through the EDSA People Power Revolution?"\cf5 ,\
+\
+        \cf4 "28"\cf5 : \cf6 "The sublime paralytic and the brain of the revolution."\cf5 ,\
+\
+        \cf4 "29"\cf5 : \cf6 "________________ is the youngest woman elected senator in Philippine history at the age of 38."\cf5 ,\
+\
+        \cf4 "30"\cf5 : \cf6 "This Filipino heroine continued the war against Spain after the death of her husband. Who is she?"\
+\
+    \cf2 \}\cf5 ,\
+\
+    \cf2 \{\
+\
+        \cf4 "1"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Philip II of Spain"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Felipe III of Spain"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Phillipe I of Spain"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Felipe IV of Spain"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "2"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Jose P. Laurel"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Corazon Aquino"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Manuel Roxas"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Elpidio Querino"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "3"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Jos\'e9 Protacio Rizal Mercado y Alonso Realonda"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Jos\'e9 Protacio  Mercado  Alonso y Realonda Rizal"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Jos\'e9 Protacio Alonso Rizal y Mercado Realonda"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Jos\'e9 Protacio Alonso Mercado y Realonda Rizal"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "4"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Mariano Gomez, Juan Burgos, and Jacinto Zamora"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Marcelo Gomez, Jos\'e9 Burgos, and Jacinto Zamora"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Mariano Gomez, Jos\'e9 Burgos, and Jacinto Zamora"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Mariano Gomez, Jos\'e9 Burgos, and Joseph Zamora"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "5"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Lapu-lapu"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Sultan Laut Buisan"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Sultan Muhammad Kudarat"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Rajah Sulayman"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "6"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Karim Al Makhdum"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Baguinda Ali"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Ibn Taymiyyah"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Sir Sayyid Ahmad Khan"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "7"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Gloria Macapagal Aroyo"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Leni Robredo"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Corazon Aquino"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Leila de Lima"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "8"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Andres Bonifacio"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Manuel Luis Quezon"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Ninoy Aquino"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Jose P. Rizal"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "9"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Efren 'bata' Reyes"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Manny Pacquiao"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Penalosa"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Nonito Donaire"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "10"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Emilio Jacinto"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Rodrigo R. Duterte"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Diosdado Macapagal"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Ninoy Aquino"\
+\
+        \cf2 \}\cf5 ,\
+        \cf4 "11"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Gregoria de Jesus"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Melchora Aquino"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Trinidad Tecson"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Teresa Magbanua"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "12"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Christopher Columbus"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Ferdinand Magellan"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Vasco de Gama"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "James Cook"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "13"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Emilio Jacinto"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Julian Felipe"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Dr. Jose P. Rizal"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Apolinario Mabini"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "14"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Jose P. Laurel"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Manuel Roxas"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Sergio Osme\'f1a"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Ramon Magsaysay"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "15"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Manuel Quezon"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Jose P. Laurel"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Manuel Roxas"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Sergio Osme\'f1a"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "16"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Jose P. Laurel"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Manuel Roxas"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Sergio Osme\'f1a"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Ramon Magsaysay"\
+\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "17"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Jose Palma"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Jose Rizal"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Julian Felipe"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Jose Panganiban"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "18"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Ferdinand Marcos Sr."\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Ferdinand Marcos Jr."\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Joseph Estrada"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Rodrigo Duterte"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "19"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Jose Palma"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Isabelo delos Reyes"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Artemio Recarte"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Julian Felipe"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "20"\cf5 : \cf2 \{\
+            \cf4 "a"\cf5 : \cf6 "General Emilio Aguinaldo"\cf5 ,\
+            \cf4 "b"\cf5 : \cf6 "General Marcelo H. del Pilar"\cf5 ,\
+            \cf4 "c"\cf5 : \cf6 "General Gregorio del Pilar"\cf5 ,\
+            \cf4 "d"\cf5 : \cf6 "General Antonio Luna"\
+        \cf2 \}\cf5 ,\
+\
+\
+        \cf4 "21"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Marcelo H. del Pilar"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Graciano Lopez Jaena "\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Mariano Ponce"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Jose Maria Panganiban"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "22"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "General Antonio Luna"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Juan Luna"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Jose Burgos "\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Graciano Lopez-Jaena"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "23"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Emilio Jacinto"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Mariano Gomez"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Andres Bonifacio"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Apolinario Mabini"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "24"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Dr. Jose Rizal"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Emilo Aguinaldo"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Jacinto Zamora"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "General Antonio Luna"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "25"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Jose Palma"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Marcelo H. Del Pilar"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Dr. Jose Rizal"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Jose Panganiban"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "26"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Admiral  George Dewey"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "General Douglas MacArthur"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "General Douglas MacArthur"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Jacob Gould Schurman"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "27"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Ferdinand Marcos Sr."\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Diosdado Macapagal"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Rodrigo Duterte"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Jose Laurel"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "28"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Dr. Jose Rizal"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Graciano Lopez Jaena"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Marcelo H. Del Pilar"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Apolinario Mabini"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "29"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Leila de Lima"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Miriam Depensor-Santiago"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Nancy Bina"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Pia Cayetano"\
+\
+        \cf2 \}\cf5 ,\
+        \cf4 "30"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Leonor Rivera"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Gregoria De Jesus"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Gabriela Silang"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Josefa Llanes Escoda"\
+\
+        \cf2 \}\
+\
+        \}\cf5 ,\
+\
+\
+    \cf2 \{\
+\
+        \cf4 "1"\cf5 : \cf6 "Philip II of Spain"\cf5 ,\
+\
+        \cf4 "2"\cf5 : \cf6 "Elpidio Querino"\cf5 ,\
+\
+        \cf4 "3"\cf5 : \cf6 "Jos\'e9 Protacio Rizal Mercado y Alonso Realonda"\cf5 ,\
+\
+        \cf4 "4"\cf5 : \cf6 "Mariano Gomez, Jos\'e9 Burgos, and Jacinto Zamora"\cf5 ,\
+\
+        \cf4 "5"\cf5 : \cf6 "Sultan Muhammad Kudarat"\cf5 ,\
+\
+        \cf4 "6"\cf5 : \cf6 "Karim Al Makhdum"\cf5 ,\
+\
+        \cf4 "7"\cf5 : \cf6 "Gloria Macapagal Aroyo"\cf5 ,\
+\
+        \cf4 "8"\cf5 : \cf6 "Jose P. Rizal"\cf5 ,\
+\
+        \cf4 "9"\cf5 : \cf6 "Manny Pacquiao"\cf5 ,\
+\
+        \cf4 "10"\cf5 : \cf6 "Ninoy Aquino"\cf5 ,\
+\
+        \cf4 "11"\cf5 : \cf6 "Melchora Aquino"\cf5 ,\
+\
+        \cf4 "12"\cf5 : \cf6 "Ferdinand Magellan"\cf5 ,\
+\
+        \cf4 "13"\cf5 : \cf6 "Emilio Jacinto"\cf5 ,\
+\
+        \cf4 "14"\cf5 : \cf6 "Manuel Roxas"\cf5 ,\
+\
+        \cf4 "15"\cf5 : \cf6 "Manuel Quezon"\cf5 ,\
+\
+        \cf4 "16"\cf5 : \cf6 "Ramon Magsaysay"\cf5 ,\
+\
+        \cf4 "17"\cf5 : \cf6 "Julian Felipe"\cf5 ,\
+\
+        \cf4 "18"\cf5 : \cf6 "Joseph Estrada"\cf5 ,\
+\
+        \cf4 "19"\cf5 : \cf6 "Jose Palma"\cf5 ,\
+\
+        \cf4 "20"\cf5 : \cf6 "General Gregorio del Pilar"\cf5 ,\
+\
+        \cf4 "21"\cf5 : \cf6 "Graciano Lopez Jaena"\cf5 ,\
+\
+        \cf4 "22"\cf5 : \cf6 "Juan Luna"\cf5 ,\
+\
+        \cf4 "23"\cf5 : \cf6 "Andres Bonifacio"\cf5 ,\
+\
+        \cf4 "24"\cf5 : \cf6 "Emilo Aguinaldo"\cf5 ,\
+\
+        \cf4 "25"\cf5 : \cf6 "Marcelo H. Del Pilar"\cf5 ,\
+\
+        \cf4 "26"\cf5 : \cf6 "General Douglas MacArthur"\cf5 ,\
+\
+        \cf4 "27"\cf5 : \cf6 "Ferdinand Marcos Sr."\cf5 ,\
+\
+        \cf4 "28"\cf5 : \cf6 "Apolinario Mabini"\cf5 ,\
+\
+        \cf4 "29"\cf5 : \cf6 "Pia Cayetano"\cf5 ,\
+\
+        \cf4 "30"\cf5 : \cf6 "Gregoria De Jesus"\
+\
+    \cf2 \}\
+]\
+\
+\
+
+\fs48 \cf7 File 3
+\fs26 \cf2 \
+\
+[\
+\{\
+\
+	\cf4 "1"\cf5 : \cf6 "How many Islands are there in the Philippines?"\cf5 ,\
+\
+	\cf4 "2"\cf5 : \cf6 "What city is the largest in the Philippines in terms of total land area?"\cf5 ,\
+\
+	\cf4 "3"\cf5 : \cf6 "How many provinces are there in the Philippines?"\cf5 ,\
+\
+	\cf4 "4"\cf5 : \cf6 "What are the provinces that consist of the acronym CALABARZON?"\cf5 ,\
+\
+	\cf4 "5"\cf5 : \cf6 "To which part of Asia does the Philippines belong?"\cf5 ,\
+\
+	\cf4 "6"\cf5 : \cf6 "Mount Pinatubo is located in the province of Luzon at the intersection of the borders of the provinces of Zambales, Tarlac, and ______."\cf5 ,\
+\
+	\cf4 "7"\cf5 : \cf6 "What is the most northern province in the Philippines?"\cf5 ,\
+\
+	\cf4 "8"\cf5 : \cf6 "How many island provinces are there in the Visayas archipelago?"\cf5 ,\
+\
+	\cf4 "9"\cf5 : \cf6 "What is the smallest province in the Philippines?"\cf5 ,\
+\
+	\cf4 "10"\cf5 : \cf6 "The largest bamboo organ in the world is found at St. Joseph Church in __________."\
+\
+    \cf2 \}\cf5 ,\
+\
+    \cf2 \{\
+\
+\
+        \cf4 "1"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "7,107"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "7,017"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "7,127"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "7,007"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "2"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Baguio City"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Cebu City"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Davao City"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Iloilo City"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "3"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "81"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "82"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "80"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "84"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "4"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Cagayan, Landusan, Baguio, Romblon, Quinaguitman"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Cavite, Laguna, Batangas, Rizal, Quezon"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Capiz, Langob, Bohol, Rosario, Quirhat"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Camarines, La Union, Roxas, Qionghai"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "5"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "North West Asia"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "South West Asia"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "North East Asia"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "South East Asia"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "6"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Lapaz"\cf5 ,\
+\
+            \cf4 "b."\cf5 : \cf6 "Pampanga"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Nueva Ecija"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Isabela"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "7"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "locos Norte"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Cagayan"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Apayao"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Batanes"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "8"\cf5 : \cf2 \{\
+            \cf4 "a"\cf5 : \cf6 "3"\cf5 ,\
+            \cf4 "b"\cf5 : \cf6 "5"\cf5 ,\
+            \cf4 "c"\cf5 : \cf6 "7"\cf5 ,\
+            \cf4 "d"\cf5 : \cf6 "9"\
+        \cf2 \}\cf5 ,\
+            \
+         \cf4 "9"\cf5 : \cf2 \{\
+\
+           \cf4 "a"\cf5 : \cf6 "Camiguin"\cf5 ,\
+\
+           \cf4 "b"\cf5 : \cf6 "Siquijor Island"\cf5 ,\
+\
+           \cf4 "c"\cf5 : \cf6 "Batanes"\cf5 ,\
+\
+           \cf4 "d"\cf5 : \cf6 "Abra"\
+\
+\cf2 \}\cf5 ,\
+\
+    \cf4 "10"\cf5 : \cf2 \{\
+\
+   	 \cf4 "a"\cf5 : \cf6 "Las Pi\'f1as City"\cf5 ,\
+\
+  	  \cf4 "b"\cf5 : \cf6 "Cabadbaran City"\cf5 ,\
+\
+  	  \cf4 "c"\cf5 : \cf6 "San Jose del Monte City"\cf5 ,\
+\
+ 	  \cf4 "d"\cf5 : \cf6 "Calamba City"\
+\
+\cf2 \}\
+\
+   \
+    \}\cf5 ,\
+\
+    \cf2 \{\
+\
+        \cf4 "1"\cf5 : \cf6 "7,107"\cf5 ,\
+\
+        \cf4 "2"\cf5 : \cf6 "Baguio City"\cf5 ,\
+\
+        \cf4 "3"\cf5 : \cf6 "81"\cf5 ,\
+\
+        \cf4 "4"\cf5 : \cf6 "Cavite, Laguna, Batangas, Rizal, Quezon"\cf5 ,\
+\
+        \cf4 "5"\cf5 : \cf6 "South East Asia"\cf5 ,\
+\
+        \cf4 "6"\cf5 : \cf6 "Pampanga"\cf5 ,\
+\
+        \cf4 "7"\cf5 : \cf6 "Batanes"\cf5 ,\
+\
+        \cf4 "8"\cf5 : \cf6 "5"\cf5 ,\
+        \
+        \cf4 "9"\cf5 : \cf6 "Batanes"\cf5 ,\
+\
+        \cf4 "10"\cf5 : \cf6 "Las Pi\'f1as City"\
+\
+        \cf2 \}\
+    ]\
+\
+\
+\
+\
+
+\fs48 \cf7 File 4
+\fs26 \cf2 \
+\
+[\
+\{\
+    \
+		\cf4 "1"\cf5 : \cf6 "This sea is considered to be one of the largest seas in the world. It is also one of the most storm-battered seas on Earth. Within this sea is one of the ten deepest trenches in the world, the Philippine Trench. What is the name of this sea?"\cf5 ,\
+\
+		\cf4 "2"\cf5 : \cf6 "What is the oldest city in the Philippines?"\cf5 ,\
+\
+		\cf4 "3"\cf5 : \cf6 "Before the name Philippines, what is the first well known name of this Island country?"\cf5 ,\
+\
+		\cf4 "4"\cf5 : \cf6 "The only surviving Spanish colonial place in the Philippines."\cf5 ,\
+\
+		\cf4 "5"\cf5 : \cf6 "Batangas, Bulacan, Cavite, Laguna, Manila, Rizal, Nueva Ecija, Pampanga, and  Tarlac. Which among these provinces does NOT represent one of the eight rays of the sun in the Philippines flag?"\cf5 ,\
+\
+		\cf4 "6"\cf5 : \cf6 "What is the longest mountain range in the Country?"\cf5 ,\
+\
+		\cf4 "7"\cf5 : \cf6 "What is the longest river in the Philippines?"\cf5 ,\
+\
+		\cf4 "8"\cf5 : \cf6 "Largest island in the Philippines?"\cf5 ,\
+\
+		\cf4 "9"\cf5 : \cf6 "If Westerners have bagels, Filipinos have\'85"\cf5 ,\
+\
+		\cf4 "10"\cf5 : \cf6 "What is the traditional clothing of the Philippines for women?"\cf5 ,\
+\
+	    \cf4 "11"\cf5 : \cf6 "What climate is experienced in the Philippines from June to November?"\cf5 ,\
+\
+	    \cf4 "12"\cf5 : \cf6 "What is the common street food in the Philippines?"\cf5 ,\
+\
+		\cf4 "13"\cf5 : \cf6 "What is the meaning of the acronym NAMFREL?"\cf5 ,\
+\
+		\cf4 "14"\cf5 : \cf6 "'Pahiyas' is a festival celebrated every May in which town in Quezon province?"\cf5 ,\
+\
+		\cf4 "15"\cf5 : \cf6 "What is the term of the President of the Philippines?"\cf5 ,\
+\
+		\cf4 "16"\cf5 : \cf6 "Which is the predominant religion of the Philippines?"\cf5 ,\
+\
+		\cf4 "17"\cf5 : \cf6 "Which of the following groups has the Philippines as its member?"\cf5 ,\
+\
+		\cf4 "18"\cf5 : \cf6 "What type of landmass is the Philippines?"\cf5 ,\
+\
+		\cf4 "19"\cf5 : \cf6 "What is the traditional sport of the Philippines?"\cf5 ,\
+\
+		\cf4 "20"\cf5 : \cf6 "What do you call a person who comes from the Philippines?"\cf5 ,\
+\
+		\cf4 "21"\cf5 : \cf6 "What is the Spanish title of the national anthem of the Philippines?"\cf5 ,\
+\
+		\cf4 "22"\cf5 : \cf6 "In Mindanao, what province has more volcanoes than towns?"\cf5 ,\
+\
+		\cf4 "23"\cf5 : \cf6 "What is the national fruit of the Philippines?"\cf5 ,\
+\
+		\cf4 "24"\cf5 : \cf6 "What is the highest mountain in the Philippines?"\cf5 ,\
+\
+		\cf4 "25"\cf5 : \cf6 "What is the residence of the President of the Philippines popularly called?"\cf5 ,\
+\
+		\cf4 "26"\cf5 : \cf6 "____________ is considered the world\'92s most perfect cone-shaped volcano."\cf5 ,\
+\
+		\cf4 "27"\cf5 : \cf6 "The nipa hut symbolizes _____________."\cf5 ,\
+\
+		\cf4 "28"\cf5 : \cf6 "The EAGLE symbolizes the ________________ of the Filipino."\cf5 ,\
+\
+		\cf4 "29"\cf5 : \cf6 "The White color in the Philippine flag stands for _________."\cf5 ,\
+\
+		\cf4 "30"\cf5 : \cf6 "What are the primary colors of the Philippine national flag?"\cf5 ,\
+\
+		\cf4 "31"\cf5 : \cf6 "What is the national flower of the Philippines?"\cf5 ,\
+\
+		\cf4 "32"\cf5 : \cf6 "Meaning of Noli Me Tangere."\cf5 ,\
+\
+		\cf4 "33"\cf5 : \cf6 "How many active volcanoes are there in the Philippines?"\cf5 ,\
+\
+		\cf4 "34"\cf5 : \cf6 "____________ in Quezon City ranks 9th among the largest malls in the world."\cf5 ,\
+\
+		\cf4 "35"\cf5 : \cf6 "Is the first book published in the Philippines."\cf5 ,\
+\
+		\cf4 "36"\cf5 : \cf6 "What does the three stars on the Philippine flag originally represent?"\cf5 ,\
+\
+		\cf4 "37"\cf5 : \cf6 "How many years of independence did the Philippines have in 2022?"\
+\
+    \cf2 \}\cf5 ,\
+\
+    \cf2 \{\
+\
+\
+        \cf4 "1"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "South China Sea"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Sibuyan sea"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Philippines sea"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Sulu sea"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "2"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Trece Martires City, Cavite"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Baguio City, Baguio"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Cebu City, Cebu"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Manila, Metro Manila"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "3"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Las Felipinas"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Pearl of the Orient"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Maharlika"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Ma-i"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "4"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Intramuros, Manila"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Mac-tan, Cebu"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Vigan City, Ilocos Sur"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Baguio City"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "5"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Laguna"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Tarlac"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Nueva Ecija"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Rizal"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "6"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Cordillera"\cf5 ,\
+\
+            \cf4 "b."\cf5 : \cf6 "Sierra Madre"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Carabalo"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Pinatubo"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "7"\cf5 : \cf2 \{\
+\
+            \cf4 "a"\cf5 : \cf6 "Cagayan river"\cf5 ,\
+\
+            \cf4 "b"\cf5 : \cf6 "Pan-ay river"\cf5 ,\
+\
+            \cf4 "c"\cf5 : \cf6 "Marikina river"\cf5 ,\
+\
+            \cf4 "d"\cf5 : \cf6 "Agno river"\
+\
+        \cf2 \}\cf5 ,\
+\
+        \cf4 "8"\cf5 : \cf2 \{\
+			\cf4 "a"\cf5 : \cf6 "Luzon"\cf5 ,\
+			\cf4 "b"\cf5 : \cf6 "Samar"\cf5 ,\
+			\cf4 "c"\cf5 : \cf6 "Mindanao"\cf5 ,\
+			\cf4 "d"\cf5 : \cf6 "Negros"\
+		\cf2 \}\cf5 ,\
+            \
+         \cf4 "9"\cf5 : \cf2 \{\
+\
+           \cf4 "a"\cf5 : \cf6 "Ensaymada"\cf5 ,\
+\
+           \cf4 "b"\cf5 : \cf6 "Sky Flake"\cf5 ,\
+\
+           \cf4 "c"\cf5 : \cf6 "Pandesal"\cf5 ,\
+\
+           \cf4 "d"\cf5 : \cf6 "Monay"\
+\
+\cf2 \}\cf5 ,\
+\
+		\cf4 "10"\cf5 : \cf2 \{\
+\
+   	 		\cf4 "a"\cf5 : \cf6 "Kimono"\cf5 ,\
+\
+  	 		\cf4 "b"\cf5 : \cf6 "Sami"\cf5 ,\
+\
+  	 	 	\cf4 "c"\cf5 : \cf6 "Sari"\cf5 ,\
+\
+ 	 	 	\cf4 "d"\cf5 : \cf6 "Baro\'92t saya"\
+\
+\cf2 \}\cf5 ,\
+\
+		\cf4 "11"\cf5 : \cf2 \{\
+\
+			\cf4 "a"\cf5 : \cf6 "Summer"\cf5 ,\
+\
+  		 	\cf4 "b"\cf5 : \cf6 "Rainy"\cf5 ,\
+\
+  		 	\cf4 "c"\cf5 : \cf6 "Winter"\cf5 ,\
+\
+ 			\cf4 "d"\cf5 : \cf6 "Autumn"\
+\
+    \cf2 \}\cf5 ,\
+\
+		\cf4 "12"\cf5 : \cf2 \{\
+\
+    		\cf4 "a"\cf5 : \cf6 "Balot"\cf5 ,\
+\
+   	 		\cf4 "b"\cf5 : \cf6 "Takoyaki"\cf5 ,\
+\
+ 	 		\cf4 "c"\cf5 : \cf6 "Croquetas"\cf5 ,\
+\
+  		 	\cf4 "d"\cf5 : \cf6 "Pirozhki"\
+\
+    \cf2 \}\cf5 ,\
+\
+   		 \cf4 "13"\cf5 : \cf2 \{\
+\
+    		\cf4 "a"\cf5 : \cf6 "National Movement: Free Relocations"\cf5 ,\
+\
+    		\cf4 "b"\cf5 : \cf6 "The National Forum for Research in Arbitration Law"\cf5 ,\
+\
+    		\cf4 "c"\cf5 : \cf6 "National Citizens' Movement for Free Elections"\cf5 ,\
+\
+    		\cf4 "d"\cf5 : \cf6 "National Members of Free Electricity"\
+\
+\cf2 \}\cf5 ,\
+\
+		\cf4 "14"\cf5 : \cf2 \{\
+\
+    		\cf4 "a"\cf5 : \cf6 "Lucban"\cf5 ,\
+\
+    		\cf4 "b"\cf5 : \cf6 "Laoag"\cf5 ,\
+\
+    		\cf4 "c"\cf5 : \cf6 "San Diego"\cf5 ,\
+\
+    		\cf4 "d"\cf5 : \cf6 "San Juan"\
+\
+\cf2 \}\cf5 ,\
+		\cf4 "15"\cf5 : \cf2 \{\
+\
+    		\cf4 "a"\cf5 : \cf6 "Four years"\cf5 ,\
+\
+  	 		\cf4 "b"\cf5 : \cf6 "Five years"\cf5 ,\
+\
+    		\cf4 "c"\cf5 : \cf6 "Six years"\cf5 ,\
+\
+    		\cf4 "d"\cf5 : \cf6 "Seven years"\
+\
+\cf2 \}\cf5 ,\
+\
+		\cf4 "16"\cf5 : \cf2 \{\
+\
+    		\cf4 "a"\cf5 : \cf6 "Christianity"\cf5 ,\
+\
+   			\cf4 "b"\cf5 : \cf6 "Islam"\cf5 ,\
+\
+    		\cf4 "c"\cf5 : \cf6 "Budhism"\cf5 ,\
+\
+    		\cf4 "d"\cf5 : \cf6 "Judaism"\
+\
+\cf2 \}\cf5 ,\
+		\cf4 "17"\cf5 : \cf2 \{\
+\
+    		\cf4 "a"\cf5 : \cf6 "NATO"\cf5 ,\
+\
+    		\cf4 "b"\cf5 : \cf6 "ASEAN"\cf5 ,\
+\
+    		\cf4 "c"\cf5 : \cf6 "SAARC"\cf5 ,\
+\
+    		\cf4 "d"\cf5 : \cf6 "OAU"\
+\
+\cf2 \}\cf5 ,\
+\
+		\cf4 "18"\cf5 : \cf2 \{\
+\
+    		\cf4 "a"\cf5 : \cf6 "Continent"\cf5 ,\
+\
+    		\cf4 "b"\cf5 : \cf6 "Archipelago"\cf5 ,\
+	\
+    		\cf4 "c"\cf5 : \cf6 "Peninsula"\cf5 ,\
+\
+   	 		\cf4 "d"\cf5 : \cf6 "Island"\
+\
+\cf2 \}\cf5 ,\
+		\cf4 "19"\cf5 : \cf2 \{\
+\
+    		\cf4 "a"\cf5 : \cf6 "Tikayad"\cf5 ,\
+\
+    		\cf4 "b"\cf5 : \cf6 "Palosebo"\cf5 ,\
+\
+   	 		\cf4 "c"\cf5 : \cf6 "Sipa"\cf5 ,\
+\
+    		\cf4 "d"\cf5 : \cf6 "Arnis"\
+\
+    \cf2 \}\cf5 ,\
+\
+		\cf4 "20"\cf5 : \cf2 \{\
+\
+   	 		\cf4 "a"\cf5 : \cf6 "Philippino"\cf5 ,\
+\
+    		\cf4 "b"\cf5 : \cf6 "Philippine"\cf5 ,\
+\
+    		\cf4 "c"\cf5 : \cf6 "Pilipino"\cf5 ,\
+	\
+   			\cf4 "d"\cf5 : \cf6 "Filipino"\
+\
+    \cf2 \}\cf5 ,\
+		\cf4 "21"\cf5 : \cf2 \{\
+\
+    		\cf4 "a"\cf5 : \cf6 "Marcha Filipina"\cf5 ,\
+\
+    		\cf4 "b"\cf5 : \cf6 "Himno Nacional Filipina"\cf5 ,\
+\
+    		\cf4 "c"\cf5 : \cf6 "Marcha Nacional Filipina"\cf5 ,\
+\
+    		\cf4 "d"\cf5 : \cf6 "Patria Adorada"\
+\
+    \cf2 \}\cf5 ,\
+		\cf4 "22"\cf5 : \cf2 \{\
+\
+    		\cf4 "a"\cf5 : \cf6 "Dinagat"\cf5 ,\
+\
+   			\cf4 "b"\cf5 : \cf6 "Sulu"\cf5 ,\
+\
+    		\cf4 "c"\cf5 : \cf6 "Camiguin"\cf5 ,\
+\
+    		\cf4 "d"\cf5 : \cf6 "Basilan"\
+\
+\cf2 \}\cf5 ,\
+		\cf4 "23"\cf5 : \cf2 \{\
+\
+    		\cf4 "a"\cf5 : \cf6 "Kiwi"\cf5 ,\
+\
+    		\cf4 "b"\cf5 : \cf6 "Melon"\cf5 ,\
+\
+    		\cf4 "c"\cf5 : \cf6 "Mango"\cf5 ,\
+\
+    		\cf4 "d"\cf5 : \cf6 "Coconut"\
+\
+\cf2 \}\cf5 ,\
+\
+		\cf4 "24"\cf5 : \cf2 \{\
+\
+    		\cf4 "a"\cf5 : \cf6 "Mt. Kitangkad"\cf5 ,\
+\
+    		\cf4 "b"\cf5 : \cf6 "Mt. Apo"\cf5 ,\
+\
+    		\cf4 "c"\cf5 : \cf6 "Mt. Pulag"\cf5 ,\
+\
+   	 		\cf4 "d"\cf5 : \cf6 "Mt. Dulang-dulang"\
+\
+\cf2 \}\cf5 ,\
+			\cf4 "25"\cf5 : \cf2 \{\
+\
+    		\cf4 "a"\cf5 : \cf6 "Presidential Palace"\cf5 ,\
+\
+    		\cf4 "b"\cf5 : \cf6 "Malaca\'f1ang Palace"\cf5 ,\
+\
+   	 		\cf4 "c"\cf5 : \cf6 "White House"\cf5 ,\
+\
+    		\cf4 "d"\cf5 : \cf6 "Buckingham Palace"\
+\
+\cf2 \}\cf5 ,\
+\
+		\cf4 "26"\cf5 : \cf2 \{\
+\
+   		 	\cf4 "a"\cf5 : \cf6 "Mayon Volcano"\cf5 ,\
+\
+    		\cf4 "b"\cf5 : \cf6 "Mt. Pinatubo"\cf5 ,\
+\
+    		\cf4 "c"\cf5 : \cf6 "Mt. Banahaw"\cf5 ,\
+	\
+   			\cf4 "d"\cf5 : \cf6 "Mt. Apo"\
+\
+    \cf2 \}\cf5 ,\
+   		\cf4 "27"\cf5 : \cf2 \{\
+\
+    		\cf4 "a"\cf5 : \cf6 "Poor lives of the Filipinos"\cf5 ,\
+\
+    		\cf4 "b"\cf5 : \cf6 "Prosperity of the Filipinos"\cf5 ,\
+\
+    		\cf4 "c"\cf5 : \cf6 "Simple way of lives of the Filipinos"\cf5 ,\
+\
+    		\cf4 "d"\cf5 : \cf6 "Represents the Filipino value of bayanihan"\
+\
+\cf2 \}\cf5 , 	\
+		\cf4 "28"\cf5 : \cf2 \{\
+\
+    		\cf4 "a"\cf5 : \cf6 "Lofty ambition"\cf5 ,\
+\
+   			\cf4 "b"\cf5 : \cf6 "Patience"\cf5 ,\
+\
+    		\cf4 "c"\cf5 : \cf6 "Industrious"\cf5 ,\
+\
+    		\cf4 "d"\cf5 : \cf6 "Bravery"\
+\
+\cf2 \}\cf5 ,\
+		\cf4 "29"\cf5 : \cf2 \{\
+\
+    		\cf4 "a"\cf5 : \cf6 "Peace"\cf5 ,\
+\
+    		\cf4 "b"\cf5 : \cf6 "Majesty"\cf5 ,\
+\
+    		\cf4 "c"\cf5 : \cf6 "Independence"\cf5 ,\
+\
+    		\cf4 "d"\cf5 : \cf6 "Courage"\
+\
+\cf2 \}\cf5 ,\
+\
+		\cf4 "30"\cf5 : \cf2 \{\
+\
+    		\cf4 "a"\cf5 : \cf6 "Yellow, orange, white"\cf5 ,\
+\
+    		\cf4 "b"\cf5 : \cf6 "Blue, white, gree"\cf5 ,\
+\
+    		\cf4 "c"\cf5 : \cf6 "Black, red ,yellow"\cf5 ,\
+\
+   	 	\cf4 "d"\cf5 : \cf6 "Red, blue, white"\
+\
+\cf2 \}\cf5 ,\
+		\cf4 "31"\cf5 : \cf2 \{\
+\
+    		\cf4 "a"\cf5 : \cf6 "Jasminum sambac"\cf5 ,\
+\
+    		\cf4 "b"\cf5 : \cf6 "Hibiscus"\cf5 ,\
+\
+   	 		\cf4 "c"\cf5 : \cf6 "Rosa"\cf5 ,\
+\
+    		\cf4 "d"\cf5 : \cf6 "Nelumbo nucifera"\
+\
+    \cf2 \}\cf5 ,\
+\
+			\cf4 "32"\cf5 : \cf2 \{\
+\
+   	 		\cf4 "a"\cf5 : \cf6 "I am not a rebel"\cf5 ,\
+\
+    		\cf4 "b"\cf5 : \cf6 "Too painful to touch"\cf5 ,\
+\
+    		\cf4 "c"\cf5 : \cf6 "Touch me not"\cf5 ,\
+	\
+   			\cf4 "d"\cf5 : \cf6 "You are not a cancer"\
+\
+\cf2 \}\cf5 ,\
+		\cf4 "33"\cf5 : \cf2 \{\
+\
+    		\cf4 "a"\cf5 : \cf6 "23"\cf5 ,\
+\
+    		\cf4 "b"\cf5 : \cf6 "33"\cf5 ,\
+\
+    		\cf4 "c"\cf5 : \cf6 "24"\cf5 ,\
+\
+    		\cf4 "d"\cf5 : \cf6 "34"\
+\
+\cf2 \}\cf5 ,\
+\
+		\cf4 "34"\cf5 : \cf2 \{\
+\
+    		\cf4 "a"\cf5 : \cf6 "Mall of Asia"\cf5 ,\
+\
+    		\cf4 "b"\cf5 : \cf6 "SM City Clark"\cf5 ,\
+\
+   	 		\cf4 "c"\cf5 : \cf6 "SM Megamall"\cf5 ,\
+\
+    		\cf4 "d"\cf5 : \cf6 "SM City North Edsa"\
+\cf2 \}\cf5 ,\
+\
+		\cf4 "35"\cf5 : \cf2 \{\
+\
+   	 		\cf4 "a"\cf5 : \cf6 "Noli Me Tangere"\cf5 ,\
+\
+    		\cf4 "b"\cf5 : \cf6 "Doctrina Christiana"\cf5 ,\
+\
+    		\cf4 "c"\cf5 : \cf6 "Domingo Nieva"\cf5 ,\
+	\
+   			\cf4 "d"\cf5 : \cf6 "Makamisa"\
+\
+    \cf2 \}\cf5 ,\
+		\cf4 "36"\cf5 : \cf2 \{\
+\
+    		\cf4 "a"\cf5 : \cf6 "Luzon, Visayas, and Mindanao"\cf5 ,\
+\
+    		\cf4 "b"\cf5 : \cf6 "Luzon, Mindanao, and Panay"\cf5 ,\
+\
+    		\cf4 "c"\cf5 : \cf6 "Luzon , Visayas and Samar"\cf5 ,\
+\
+    		\cf4 "d"\cf5 : \cf6 "Luzon, Mindanao and Leyte"\
+\
+\cf2 \}\cf5 ,\
+		\cf4 "37"\cf5 : \cf2 \{\
+\
+    		\cf4 "a"\cf5 : \cf6 "124"\cf5 ,\
+\
+    		\cf4 "b"\cf5 : \cf6 "128"\cf5 ,\
+\
+    		\cf4 "c"\cf5 : \cf6 "126"\cf5 ,\
+\
+    		\cf4 "d"\cf5 : \cf6 "127"\
+\
+\cf2 \}\
+\
+\
+    \}\cf5 ,\
+\
+    \cf2 \{\
+\
+        \cf4 "1"\cf5 : \cf6 "Philippines sea"\cf5 ,\
+\
+        \cf4 "2"\cf5 : \cf6 "Cebu City, Cebu"\cf5 ,\
+\
+        \cf4 "3"\cf5 : \cf6 "Ma-i"\cf5 ,\
+\
+        \cf4 "4"\cf5 : \cf6 "Vigan City, Ilocos Sur"\cf5 ,\
+\
+        \cf4 "5"\cf5 : \cf6 "Rizal"\cf5 ,\
+\
+        \cf4 "6"\cf5 : \cf6 "Sierra Madre"\cf5 ,\
+\
+        \cf4 "7"\cf5 : \cf6 "Cagayan river"\cf5 ,\
+\
+        \cf4 "8"\cf5 : \cf6 "Luzon"\cf5 ,\
+        \
+        \cf4 "9"\cf5 : \cf6 "Pandesal"\cf5 ,\
+\
+        \cf4 "10"\cf5 : \cf6 "Baro\'92t saya"\cf5 ,\
+\
+        \cf4 "11"\cf5 : \cf6 "Rainy"\cf5 ,\
+                \
+        \cf4 "12"\cf5 : \cf6 "Balot"\cf5 ,\
+                \
+        \cf4 "13"\cf5 : \cf6 "National Citizens' Movement for Free Elections"\cf5 ,\
+                \
+        \cf4 "14"\cf5 : \cf6 "Lucban"\cf5 ,\
+                \
+        \cf4 "15"\cf5 : \cf6 "Six years"\cf5 ,\
+                \
+        \cf4 "16"\cf5 : \cf6 "Christianity"\cf5 ,\
+                \
+        \cf4 "17"\cf5 : \cf6 "ASEAN"\cf5 ,\
+                \
+        \cf4 "18"\cf5 : \cf6 "Island"\cf5 ,\
+                \
+        \cf4 "19"\cf5 :  \cf6 "Arnis"\cf5 ,\
+        \
+        \cf4 "20"\cf5 : \cf6 "Filipino"\cf5 ,\
+\
+		\cf4 "21"\cf5 : \cf6 "Marcha Nacional Filipina"\cf5 ,\
+\
+		\cf4 "22"\cf5 : \cf6 "Camiguin"\cf5 ,\
+\
+		\cf4 "23"\cf5 : \cf6 "Mango"\cf5 ,\
+\
+		\cf4 "24"\cf5 : \cf6 "Mt. Apo"\cf5 ,\
+\
+		\cf4 "25"\cf5 : \cf6 "Malaca\'f1ang Palace"\cf5 ,\
+\
+		\cf4 "26"\cf5 : \cf6 "Mayon Volcano"\cf5 ,\
+\
+		\cf4 "27"\cf5 : \cf6 "Represents the Filipino value of bayanihan"\cf5 ,\
+\
+		\cf4 "28"\cf5 : \cf6 "Bravery"\cf5 ,\
+\
+		\cf4 "29"\cf5 : \cf6 "Peace"\cf5 ,\
+\
+		\cf4 "30"\cf5 : \cf6 "Red, blue, white"\cf5 ,\
+\
+		\cf4 "31"\cf5 : \cf6 "Jasminum sambac"\cf5 ,\
+\
+		\cf4 "32"\cf5 : \cf6 "Touch me not"\cf5 ,\
+\
+		\cf4 "33"\cf5 : \cf6 "24"\cf5 ,\
+\
+		\cf4 "34"\cf5 : \cf6 "SM City North Edsa"\cf5 ,\
+\
+		\cf4 "35"\cf5 : \cf6 "Doctrina Christiana"\cf5 ,\
+\
+      	\cf4 "36"\cf5 : \cf6 "Luzon, Mindanao, and Panay"\cf5 ,\
+\
+		\cf4 "37"\cf5 : \cf6 "124"\
+\
+    \cf2 \}\
+]\
+\
+}
