@@ -1,0 +1,151 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 Courier;\f2\fmodern\fcharset0 Courier-Oblique;
+}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red191\green100\blue37;\red88\green118\blue71;
+\red153\green168\blue186;\red133\green96\blue154;\red172\green168\blue31;\red253\green187\blue90;\red86\green133\blue173;
+}
+{\*\expandedcolortbl;;\cssrgb\c100000\c100000\c100000\c0;\cssrgb\c79920\c46956\c19137;\cssrgb\c41609\c52985\c34799;
+\cssrgb\c66409\c71888\c77837;\cssrgb\c59713\c46577\c66896;\cssrgb\c73132\c70738\c15791;\cssrgb\c99879\c77609\c42650;\cssrgb\c40804\c59334\c73555;
+}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb2 October 25, 2022\
+
+\fs24 \
+	 Today, I still continued fixing my errors on my quiz app in  flutter. I did fix some minor errors like the results page and assets.  But the major one\'97 such as the timer is still not working. \
+\
+\
+
+\fs36 RESULTPAGE.DART
+\fs24 \
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs30 \cf3 import \cf4 'package:flutter/material.dart'\cf3 ;\
+import \cf4 'package:star/home.dart'\cf3 ;\
+ \
+class \cf5 resultpage \cf3 extends \cf5 StatefulWidget \{\
+  int \cf6 marks\cf3 ;\
+  \cf5 resultpage(\{Key? key\cf3 , required this\cf5 .\cf6 marks\cf5 \}) : \cf3 super\cf5 (key: key)\cf3 ;\
+\
+  \cf7 @override\
+  \cf5 State<resultpage> \cf8 createState\cf5 () => \cf8 _resultpageState\cf5 (\cf6 marks\cf5 )\cf3 ;\
+\cf5 \}\
+\
+\cf3 class \cf5 _resultpageState \cf3 extends \cf5 State<resultpage> \{\
+\
+  List<String> \cf6 images \cf5 = [\
+    \cf4 "assets/as.png"\cf3 ,\
+    \cf4 "assets/goods.png"\cf3 ,\
+    \cf4 "assets/bad.png"\cf3 ,\
+  \cf5 ]\cf3 ;\
+  \cf5 String \cf6 message\cf3 ;\
+  \cf5 String \cf6 image\cf3 ;\
+\
+\
+  \cf7 @override\
+  \cf3 void \cf8 initState\cf5 () \{\
+    \cf3 if \cf5 (\cf6 marks \cf5 < \cf9 20\cf5 ) \{\
+      \cf6 image \cf5 = \cf6 images\cf5 [\cf9 2\cf5 ]\cf3 ;\
+      \cf6 message \cf5 = \cf4 "You Should Try Harder...\cf3 \\n\cf4 " \cf5 + \cf4 "You scored \cf5 $\cf6 marks\cf4 "\cf3 ;\
+    \cf5 \} \cf3 else if \cf5 (\cf6 marks \cf5 < \cf9 35\cf5 ) \{\
+      \cf6 image \cf5 = \cf6 images\cf5 [\cf9 1\cf5 ]\cf3 ;\
+      \cf6 message \cf5 = \cf4 "You Can Do Much Better...\cf3 \\n\cf4 " \cf5 + \cf4 "You scored \cf5 $\cf6 marks\cf4 "\cf3 ;\
+    \cf5 \} \cf3 else \cf5 \{\
+      \cf6 image \cf5 = \cf6 images\cf5 [\cf9 0\cf5 ]\cf3 ;\
+      \cf6 message \cf5 = \cf4 "You Did Very Well!\cf3 \\n\cf4 " \cf5 + \cf4 "You scored \cf5 $\cf6 marks\cf4 "\cf3 ;\
+    \cf5 \}\
+    \cf3 super\cf5 .initState()\cf3 ;\
+  \cf5 \}\
+  int \cf6 marks\cf3 ;\
+  \cf5 _resultpageState(\cf3 this\cf5 .\cf6 marks\cf5 )\cf3 ;\
+  \cf7 @override\
+  \cf5 Widget \cf8 build\cf5 (BuildContext context) \{\
+    \cf3 return \cf8 Scaffold\cf5 (\
+      appBar: \cf8 AppBar\cf5 (\
+        backgroundColor: \cf8 Color\cf5 (\cf9 0xFF252c4a\cf5 )\cf3 ,\
+        \cf5 title: \cf8 Text\cf5 (\
+          \cf4 "Result"\cf3 ,\
+        \cf5 )\cf3 ,\
+      \cf5 )\cf3 ,\
+      \cf5 body:  \cf8 Column\cf5 (\
+        children: <Widget>[\
+          \cf8 Expanded\cf5 (\
+            flex: \cf9 6\cf3 ,\
+            \cf5 child: \cf8 Material\cf5 (\
+              elevation: \cf9 10.0\cf3 ,\
+              \cf5 child: \cf8 Container\cf5 (\
+                width: \cf9 400.0\cf3 ,\
+                \cf5 height: \cf9 300.0\cf3 ,\
+                \cf5 child:\cf8 Column\cf5 (\
+                  children: <Widget>[\
+                   \cf8 Material\cf5 (\
+                     child: \cf8 Container\cf5 (\
+                       width: \cf9 400.0\cf3 ,\
+                       \cf5 height: \cf9 350.0\cf3 ,\
+                       \cf5 child: \cf8 ClipRect\cf5 (\
+                         child: \cf8 Image\cf5 (\
+                           image: \cf8 AssetImage\cf5 (\
+                            \cf6 image\cf3 ,\
+                           \cf5 )\cf3 ,\
+                         \cf5 )\cf3 ,\
+                       \cf5 )\cf3 ,\
+                     \cf5 )\cf3 ,\
+                   \cf5 )\cf3 ,\
+                    \cf8 Padding\cf5 (\
+                      padding: \cf3 const \cf8 EdgeInsets\cf5 .\cf8 symmetric\cf5 (\
+                        vertical: \cf9 15.0\cf3 ,\
+                        \cf5 horizontal: \cf9 10.0\cf3 ,\
+                      \cf5 )\cf3 ,\
+                      \cf5 child: \cf8 Center\cf5 (\
+                        child: \cf8 Text\cf5 (\
+                        \cf6 message\cf3 ,\
+                          \cf5 style: \cf8 TextStyle\cf5 (\
+                            color: \cf8 Color\cf5 (\cf9 0xFF252c4a\cf5 )\cf3 ,\
+                            \cf5 fontSize: \cf9 40.0\cf3 ,\
+                            \cf5 fontWeight: FontWeight.
+\f2\i \cf6 bold
+\f1\i0 \cf3 ,\
+                          \cf5 )\cf3 ,\
+                        \cf5 )\cf3 ,\
+                      \cf5 )\cf3 ,\
+                    \cf5 )\cf3 ,\
+                  \cf5 ]\cf3 ,\
+                 \cf5 )\cf3 ,\
+                \cf5 )\cf3 ,\
+              \cf5 )\cf3 ,\
+            \cf5 )\cf3 ,\
+          \cf8 Expanded\cf5 (\
+              flex: \cf9 3\cf3 ,\
+            \cf5 child: \cf8 Row\cf5 (\
+              mainAxisAlignment: MainAxisAlignment.\cf6 center\cf3 ,\
+              \cf5 children: <Widget>[\
+                \cf8 OutlinedButton\cf5 (\
+                  onPressed: ()\{\
+                    Navigator.
+\f2\i \cf8 of
+\f1\i0 \cf5 (context).pushReplacement(\cf8 MaterialPageRoute\cf5 (\
+                        builder: (context)=> \cf8 homepage\cf5 ()\cf3 ,\
+                    \cf5 ))\cf3 ;\
+                  \cf5 \}\cf3 ,\
+                  \cf5 child: \cf8 Text\cf5 (\
+                    \cf4 "Continue"\cf3 ,\
+                    \cf5 style:  \cf8 TextStyle\cf5 (\
+                      fontSize: \cf9 24.0\cf3 ,\
+                      \cf5 color: \cf8 Color\cf5 (\cf9 0xFF252c4a\cf5 )\cf3 ,\
+                    \cf5 )\cf3 ,\
+                  \cf5 )\cf3 ,\
+\
+                \cf5 )\cf3 ,\
+              \cf5 ]\cf3 ,\
+            \cf5 )\cf3 ,\
+          \cf5 )\cf3 ,\
+        \cf5 ]\cf3 ,\
+      \cf5 )\cf3 ,\
+    \cf5 )\cf3 ;\
+  \cf5 \}\
+\}\
+\
+}
